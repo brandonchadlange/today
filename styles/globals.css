@@ -24,3 +24,7 @@ a {
     background: black;
   }
 }
+
+.app-shell {
+  background-color: rgb(236, 236, 236);
+}
