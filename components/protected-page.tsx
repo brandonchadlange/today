@@ -14,7 +14,7 @@ const ProtectedPage = ({ children }: ProtectedPageProps) => {
     if (status === "unauthenticated") {
       router.push("/login");
     }
-  }, [status]);
+  }, [status, router]);
 
   return <>{status === "authenticated" && children}</>;
 };

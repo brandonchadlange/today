@@ -43,24 +43,24 @@ interface ItemProps extends React.ComponentPropsWithoutRef<"div"> {
   description: string;
 }
 
-const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
-  ({ image, label, color, description, ...others }: ItemProps, ref) => (
-    <div ref={ref} {...others}>
-      <Group noWrap>
-        <Avatar size={24} color={color}>
-          <IconExclamationMark size={16} />
-        </Avatar>
+// const SelectItem = forwardRef<HTMLDivElement, ItemProps>(
+//   ({ image, label, color, description, ...others }: ItemProps, ref) => (
+//     <div ref={ref} {...others}>
+//       <Group noWrap>
+//         <Avatar size={24} color={color}>
+//           <IconExclamationMark size={16} />
+//         </Avatar>
 
-        <div>
-          <Text size="sm">{label}</Text>
-          <Text size="xs" color="dimmed">
-            {description}
-          </Text>
-        </div>
-      </Group>
-    </div>
-  )
-);
+//         <div>
+//           <Text size="sm">{label}</Text>
+//           <Text size="xs" color="dimmed">
+//             {description}
+//           </Text>
+//         </div>
+//       </Group>
+//     </div>
+//   )
+// );
 
 const NewTask = () => {
   const [loading, setLoading] = useState(false);
@@ -112,7 +112,7 @@ const NewTask = () => {
                   {...form.getInputProps("importance")}
                   label="Importance"
                   placeholder="Pick one"
-                  itemComponent={SelectItem}
+                  // itemComponent={SelectItem}
                   data={data}
                   maxDropdownHeight={400}
                 />
